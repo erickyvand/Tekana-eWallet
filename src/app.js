@@ -2,8 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import { config } from 'dotenv';
 import routes from './routes';
 import configureSwagger from './swagger';
+
+config();
 
 const app = express();
 
